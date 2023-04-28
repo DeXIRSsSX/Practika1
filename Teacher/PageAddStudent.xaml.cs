@@ -25,9 +25,26 @@ namespace WpfApp3.Teacher
         {
             InitializeComponent();
             CmbSpecial.SelectedValuePath = "Id";
-            CmbSpecial.DisplayMemberPath = Name;
-        }
+            CmbSpecial.DisplayMemberPath = "Name";
+            CmbSpecial.ItemsSource = OdbConnectHelper.entObj.Special.ToList();
 
+            CmbFormTime.SelectedValuePath = "Id";
+            CmbFormTime.DisplayMemberPath = "Name";
+            CmbFormTime.ItemsSource = OdbConnectHelper.entObj.FormTime.ToList();
+
+            CmbYear.SelectedValuePath = "Id";
+            CmbYear.DisplayMemberPath = "Year";
+            CmbYear.ItemsSource = OdbConnectHelper.entObj.YearAdd.ToList();
+
+            CmbNameGroup.SelectedValuePath = "Id";
+            CmbNameGroup.DisplayMemberPath = "Name";
+            CmbNameGroup.ItemsSource = OdbConnectHelper.entObj.NameGroup.ToList();
+        }
+        /// <summary>
+        /// Логика работы добавление студента
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAddStudent_Click(object sender, RoutedEventArgs e)
         {
             FrameApp.frnObj.Navigate(new PageAddStudent());

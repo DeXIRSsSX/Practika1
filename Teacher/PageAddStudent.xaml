@@ -40,19 +40,19 @@
                 <TextBlock
                     Width="150"
                     Text="Год поступления:"/>
-                <ComboBox/>
+                <ComboBox Name="CmbYear"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                     <TextBlock
                         Width="150"
                     Text="Форма обучения:"/>
-                    <ComboBox/>
+                    <ComboBox Name="CmbFormTime"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                         <TextBlock
                             Width="150"
                     Text="Название группы:"/>
-                        <ComboBox/>
+                        <ComboBox Name="CmbNameGroup"/>
                     </StackPanel>
                     <StackPanel>
                         <Button
