@@ -66,6 +66,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClassHelper\UserControlHelp.cs" />
     <Compile Include="DB\Discipline.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -128,8 +129,20 @@
     <Compile Include="DB\YearAdd.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\EditEvaluation.xaml.cs">
+      <DependentUpon>EditEvaluation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\PageAddStudent.xaml.cs">
       <DependentUpon>PageAddStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\PageEditEvaluationStudent.xaml.cs">
+      <DependentUpon>PageEditEvaluationStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\PageJournalStudent.xaml.cs">
+      <DependentUpon>PageJournalStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml\PageAddEvaluation.xaml.cs">
+      <DependentUpon>PageAddEvaluation.xaml</DependentUpon>
     </Compile>
     <Compile Include="xaml\PageLogin.xaml.cs">
       <DependentUpon>PageLogin.xaml</DependentUpon>
@@ -139,6 +152,9 @@
     </Compile>
     <Compile Include="xaml\PageStudent.xaml.cs">
       <DependentUpon>PageStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml\PageStudentList.xaml.cs">
+      <DependentUpon>PageStudentList.xaml</DependentUpon>
     </Compile>
     <Compile Include="xaml\PageTeacher.xaml.cs">
       <DependentUpon>PageTeacher.xaml</DependentUpon>
@@ -155,7 +171,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Teacher\EditEvaluation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Teacher\PageAddStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\PageEditEvaluationStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\PageJournalStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml\PageAddEvaluation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,6 +200,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="xaml\PageStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xaml\PageStudentList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -12,7 +12,7 @@
         <StackPanel
             HorizontalAlignment="Center"
             VerticalAlignment="Center">
-            
+
             <StackPanel Orientation="Horizontal">
                 <TextBlock
                     Width="150"
@@ -38,9 +38,9 @@
                     x:Name="BtnReg"
                     Click="BtnReg_Click"
                     Content="Регистрация"/>
+                
             </StackPanel>
-             
+            <CheckBox Name="ChkSaveLogin" HorizontalAlignment="Left" IsChecked="True" Content="Сохранить логин"/>
         </StackPanel>
-        
     </Grid>
 </Page>

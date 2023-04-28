@@ -23,5 +23,10 @@ namespace WpfApp3.DB
         public virtual Discipline Discipline { get; set; }
         public virtual NameGroup NameGroup { get; set; }
         public virtual Student Student { get; set; }
+
+        /*public static implicit operator Journal(Journal v)
+        {
+            throw new NotImplementedException();
+        }*/
     }
 }

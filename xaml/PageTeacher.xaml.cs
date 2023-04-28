@@ -41,5 +41,25 @@ namespace WpfApp3.xaml
         {
 
         }
+
+        private void BtnAddEvaluation_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frnObj.Navigate(new PageAddEvaluation());
+        }
+
+        private void StudentList_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frnObj.Navigate(new PageStudentList());
+        }
+
+        private void EditEvaluation_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frnObj.Navigate(new EditEvaluation());
+        }
+
+        private void DeleteStudent_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

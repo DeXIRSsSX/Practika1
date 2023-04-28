@@ -12,7 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp3.ClassHelper;
 using WpfApp3.DB;
+using WpfApp3.Teacher;
 
 namespace WpfApp3.xaml
 {
@@ -24,11 +26,17 @@ namespace WpfApp3.xaml
         public PageStudent()
         {
             InitializeComponent();
+            TxtLoginUser.Text = UserControlHelp.LoginUser;
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             FrameApp.frnObj.GoBack();
+        }
+
+        private void BtnAddStudent_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

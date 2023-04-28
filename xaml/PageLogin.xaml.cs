@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp3.ClassHelper;
 using WpfApp3.DB;
 
 
@@ -25,6 +26,24 @@ namespace WpfApp3.xaml
         public PageLogin()
         {
             InitializeComponent();
+
+            if (Properties.Settings.Default.EventSaveLogin != string.Empty)
+            {
+                TxbLogin.Text = Properties.Settings.Default.EventSaveLogin;
+            }
+        }
+        public void RememberMe()
+        {
+            if  (ChkSaveLogin.IsChecked == true)
+            {
+                Properties.Settings.Default.EventSaveLogin = TxbLogin.Text;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                Properties.Settings.Default.EventSaveLogin = "";
+                Properties.Settings.Default.Save();
+            }
         }
 
         private void BtnReg_Click(object sender, RoutedEventArgs e)
@@ -40,7 +59,7 @@ namespace WpfApp3.xaml
                     X => X.Login == TxbLogin.Text && X.Password == PsbPassword.Password);
                 if (userObj == null)
                 {
-  MessageBox.Show("Такого пользователя нету!","Ананас",
+                    MessageBox.Show("Такого пользователя нету!","Уведомление",
                     MessageBoxButton.OK,
                     MessageBoxImage.Warning);
                     FrameApp.frnObj.Navigate(new PageRegistration());
@@ -53,13 +72,15 @@ namespace WpfApp3.xaml
                             //MessageBox.Show("Салам попалам Student", "Весточка" ,
                             // MessageBoxButton.OK,
                             // MessageBoxImage.Warning);
-
+                            RememberMe();
+                            UserControlHelp.LoginUser = TxbLogin.Text;
                             FrameApp.frnObj.Navigate(new PageStudent());
                             break;
                         case 2:
                             // MessageBox.Show("Салам сенсей", "Весточка" ,
                             //MessageBoxButton.OK,
                             // MessageBoxImage.Warning);
+                            RememberMe();
                             FrameApp.frnObj.Navigate(new PageTeacher());
                             break;
                     }

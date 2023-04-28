@@ -17,13 +17,13 @@
             <Button Content="Добавить студента" 
                  Name="BtnAddStudent"
                  Click="BtnAddStudent_Click"/>
-        <Button Content="Добавить оценку" 
+        <Button Content="Добавить оценку" Name="BtnAddEvaluation" Click="BtnAddEvaluation_Click"
                   />
-        <Button Content="Список студентов" 
+        <Button Content="Список студентов"  Name="StudentList" Click="StudentList_Click"
                   />
-            <Button Content="Редактировать оценки" 
+            <Button Content="Редактировать оценки" Name="EditEvaluation" Click="EditEvaluation_Click"
                   />
-            <Button Content="Удалить студента" 
+            <Button Content="Удалить студента" Name="DeleteStudent" Click="DeleteStudent_Click"
                   />
             <Button Content="MVC" Click="Button_Click" 
                   />

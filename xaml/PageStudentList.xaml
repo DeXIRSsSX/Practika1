@@ -1,0 +1,41 @@
+﻿<Page x:Class="WpfApp3.xaml.PageStudentList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3.xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Список студентов ">
+
+    <Grid>
+        <Button 
+            Content="Назад"
+            Name="BtnBack"
+            Click="BtnBack_Click"
+            Style="{StaticResource BtnTransparent}"/>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock TextAlignment="Center" VerticalAlignment="Center" Text="Выберите группу: "/>
+                <ComboBox Height="35" Name="CmbSlectGroup" SelectionChanged="CmbSlectGroup_SelectionChanged"/>
+                <Button Name="BtnSearch" Content="Ок" Click="BtnSearch_Click"/>
+            </StackPanel>
+            <DataGrid Name="GridList" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="ФИО" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding NameGroup.Name}" Header="Группа" Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Special.Name}" Header="Специальность" Width="100"/>
+                    <DataGridTextColumn Binding="{Binding FormTime.Name}" Header="Форма обучения" Width="130"/>
+                    <DataGridTextColumn Binding="{Binding YearAdd.Year}" Header="Год поступления" Width="120"/>
+                    <DataGridTemplateColumn Width="*">
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <Button Name="BtnProfile" Content="" Click="BtnProfile_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>

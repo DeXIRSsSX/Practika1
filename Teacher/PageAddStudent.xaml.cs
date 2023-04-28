@@ -47,6 +47,26 @@ namespace WpfApp3.Teacher
         /// <param name="e"></param>
         private void BtnAddStudent_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                Student stdObj = new Student()
+                {
+                    Name = TxbNameStudent.Text,
+                    NameGroup = CmbNameGroup.SelectedItem as NameGroup,
+                    Special = CmbSpecial.SelectedItem as Special,
+                    FormTime = CmbFormTime.SelectedItem as FormTime,
+                    YearAdd = CmbYear.SelectedItem as YearAdd,
+                };
+                OdbConnectHelper.entObj.Student.Add(stdObj);
+                OdbConnectHelper.entObj.SaveChanges();
+                MessageBox.Show("Студент" + stdObj.Name + "успешно добавлен", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Критическая работа с приложением: " + ex.Message.ToString(),"Уведомление", MessageBoxButton.OK,MessageBoxImage.Warning);
+            }
+
+            
             FrameApp.frnObj.Navigate(new PageAddStudent());
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -59,9 +79,5 @@ namespace WpfApp3.Teacher
             FrameApp.frnObj.GoBack();
         }
 
-        private void CmbSpecial_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }
