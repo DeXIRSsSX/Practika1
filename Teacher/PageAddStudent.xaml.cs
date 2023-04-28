@@ -30,9 +30,8 @@ namespace WpfApp3.Teacher
 
         private void BtnAddStudent_Click(object sender, RoutedEventArgs e)
         {
-            
+            FrameApp.frnObj.Navigate(new PageAddStudent());
         }
-
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
