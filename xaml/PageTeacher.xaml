@@ -1,0 +1,37 @@
+﻿<Page x:Class="WpfApp3.xaml.PageTeacher"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3.xaml"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Окно преподователя">
+
+   
+
+    <Grid>
+        <StackPanel
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center">
+            <Button Content="Добавить студента" 
+                 Name="BtnAddStudent"
+                 Click="BtnAddStudent_Click"/>
+        <Button Content="Добавить оценку" 
+                  />
+        <Button Content="Список студентов" 
+                  />
+            <Button Content="Редактировать оценки" 
+                  />
+            <Button Content="Удалить студента" 
+                  />
+            <Button Content="MVC" Click="Button_Click" 
+                  />
+        </StackPanel>
+        <Button
+            Content="Назад"
+            Name="BtnBack"
+            Click="BtnBack_Click"
+            Style="{StaticResource BtnTransparent}"/>
+    </Grid>
+</Page>
