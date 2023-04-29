@@ -5,32 +5,33 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="7227f34157f141ee880d53ad80413d58" Name="Diagram1" ZoomLevel="74">
-        <EntityTypeShape EntityType="AppAcademyWSRModel.Discipline" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.FormTime" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.History" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.NameGroup" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.Role" Width="1.5" PointX="3.75" PointY="10.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.Special" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.Status" Width="1.5" PointX="6" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.Student" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.Teacher" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.User" Width="1.5" PointX="6" PointY="10.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.YearAdd" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.Journal" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_Journal_Discipline" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_Teacher_Discipline" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_Student_FormTime" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_History_Status" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_History_Student" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_History_Teacher" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_History_User" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_Journal_NameGroup" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_Student_NameGroup" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_User_Role" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_Student_Special" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_Journal_Student" ManuallyRouted="false" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_Student_YearAdd" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.Discipline" Width="1.5" PointX="0.75" PointY="9.625" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.FormTime" Width="1.5" PointX="3.75" PointY="9.875" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.History" Width="1.5" PointX="8.25" PointY="3.875" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.Journal" Width="1.5" PointX="3" PointY="4" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.NameGroup" Width="1.5" PointX="0.75" PointY="4.5" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.Role" Width="1.5" PointX="3.75" PointY="13.125" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.Special" Width="1.5" PointX="3.75" PointY="7.625" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.Status" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.Student" Width="1.5" PointX="6" PointY="3.625" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="8.5" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.Teacher" Width="1.5" PointX="6" PointY="8.125" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.User" Width="1.5" PointX="6" PointY="12.875" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.YearAdd" Width="1.5" PointX="3.75" PointY="1.25" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_Journal_Discipline" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_Teacher_Discipline" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_Student_FormTime" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_History_Status" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_History_Student" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_History_Teacher" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_History_User" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_Journal_NameGroup" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_Journal_Student" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_Journal_Student1" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_Student_NameGroup" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_User_Role" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_Student_Special" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_Student_YearAdd" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

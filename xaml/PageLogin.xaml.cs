@@ -70,17 +70,11 @@ namespace WpfApp3.xaml
                     switch (userObj.IdRole)
                     {
                         case 1:
-                            //MessageBox.Show("Салам попалам Student", "Весточка" ,
-                            // MessageBoxButton.OK,
-                            // MessageBoxImage.Warning);
                            /* RememberMe();*/
-                            UserControlHelp.LoginUser = TxbLogin.Text;
+                            /*UserControlHelp.LoginUser = TxbLogin.Text;*/
                             FrameApp.frnObj.Navigate(new PageStudent());
                             break;
                         case 2:
-                            // MessageBox.Show("Салам сенсей", "Весточка" ,
-                            //MessageBoxButton.OK,
-                            // MessageBoxImage.Warning);
                             /*RememberMe();*/
                             FrameApp.frnObj.Navigate(new PageTeacher());
                             break;

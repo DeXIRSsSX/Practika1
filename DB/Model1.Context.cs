@@ -30,6 +30,7 @@ namespace WpfApp3.DB
         public virtual DbSet<Discipline> Discipline { get; set; }
         public virtual DbSet<FormTime> FormTime { get; set; }
         public virtual DbSet<History> History { get; set; }
+        public virtual DbSet<Journal> Journal { get; set; }
         public virtual DbSet<NameGroup> NameGroup { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Special> Special { get; set; }
@@ -39,7 +40,6 @@ namespace WpfApp3.DB
         public virtual DbSet<Teacher> Teacher { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<YearAdd> YearAdd { get; set; }
-        public virtual DbSet<Journal> Journal { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
