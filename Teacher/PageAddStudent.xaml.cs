@@ -24,19 +24,19 @@ namespace WpfApp3.Teacher
         public PageAddStudent()
         {
             InitializeComponent();
-            CmbSpecial.SelectedValuePath = "Id";
+            CmbSpecial.SelectedValuePath = "id";
             CmbSpecial.DisplayMemberPath = "Name";
             CmbSpecial.ItemsSource = OdbConnectHelper.entObj.Special.ToList();
 
-            CmbFormTime.SelectedValuePath = "Id";
+            CmbFormTime.SelectedValuePath = "id";
             CmbFormTime.DisplayMemberPath = "Name";
             CmbFormTime.ItemsSource = OdbConnectHelper.entObj.FormTime.ToList();
 
-            CmbYear.SelectedValuePath = "Id";
+            CmbYear.SelectedValuePath = "id";
             CmbYear.DisplayMemberPath = "Year";
             CmbYear.ItemsSource = OdbConnectHelper.entObj.YearAdd.ToList();
 
-            CmbNameGroup.SelectedValuePath = "Id";
+            CmbNameGroup.SelectedValuePath = "id";
             CmbNameGroup.DisplayMemberPath = "Name";
             CmbNameGroup.ItemsSource = OdbConnectHelper.entObj.NameGroup.ToList();
         }

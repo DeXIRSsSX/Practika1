@@ -26,7 +26,7 @@ namespace WpfApp3.xaml
         {
             InitializeComponent();
 
-            CmbSlectGroup.SelectedValuePath = "Id";
+            CmbSlectGroup.SelectedValuePath = "id";
             CmbSlectGroup.DisplayMemberPath = "Name";
             CmbSlectGroup.ItemsSource = OdbConnectHelper.entObj.NameGroup.ToList();
 

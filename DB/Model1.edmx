@@ -185,7 +185,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Journal_Student">
+        <Association Name="FK_Journal_Student2">
           <End Role="Student" Type="Self.Student" Multiplicity="1" />
           <End Role="Journal" Type="Self.Journal" Multiplicity="*" />
           <ReferentialConstraint>
@@ -197,19 +197,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Journal_Student1">
-          <End Role="Student" Type="Self.Student" Multiplicity="1" />
-          <End Role="Journal" Type="Self.Journal" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Student">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="Journal">
-              <PropertyRef Name="IdStudent" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Student_FormTime">
+        <Association Name="FK_Student_FormTime1">
           <End Role="FormTime" Type="Self.FormTime" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -233,7 +221,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Student_Special">
+        <Association Name="FK_Student_Special1">
           <End Role="Special" Type="Self.Special" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -245,7 +233,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Student_YearAdd">
+        <Association Name="FK_Student_YearAdd1">
           <End Role="YearAdd" Type="Self.YearAdd" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -350,15 +338,11 @@
             <End Role="NameGroup" EntitySet="NameGroup" />
             <End Role="Journal" EntitySet="Journal" />
           </AssociationSet>
-          <AssociationSet Name="FK_Journal_Student" Association="Self.FK_Journal_Student">
+          <AssociationSet Name="FK_Journal_Student2" Association="Self.FK_Journal_Student2">
             <End Role="Student" EntitySet="Student" />
             <End Role="Journal" EntitySet="Journal" />
           </AssociationSet>
-          <AssociationSet Name="FK_Journal_Student1" Association="Self.FK_Journal_Student1">
-            <End Role="Student" EntitySet="Student" />
-            <End Role="Journal" EntitySet="Journal" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Student_FormTime" Association="Self.FK_Student_FormTime">
+          <AssociationSet Name="FK_Student_FormTime1" Association="Self.FK_Student_FormTime1">
             <End Role="FormTime" EntitySet="FormTime" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
@@ -366,11 +350,11 @@
             <End Role="NameGroup" EntitySet="NameGroup" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
-          <AssociationSet Name="FK_Student_Special" Association="Self.FK_Student_Special">
+          <AssociationSet Name="FK_Student_Special1" Association="Self.FK_Student_Special1">
             <End Role="Special" EntitySet="Special" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
-          <AssociationSet Name="FK_Student_YearAdd" Association="Self.FK_Student_YearAdd">
+          <AssociationSet Name="FK_Student_YearAdd1" Association="Self.FK_Student_YearAdd1">
             <End Role="YearAdd" EntitySet="YearAdd" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
@@ -471,7 +455,7 @@
             <End Role="Student" EntitySet="Student" />
             <End Role="Journal" EntitySet="Journal" />
           </AssociationSet>
-          <AssociationSet Name="FK_Student_NameGroup" Association="AppAcademyWSRModel.FK_Student_NameGroup">
+          <AssociationSet Name="FK_Student_NameGroup1" Association="AppAcademyWSRModel.FK_Student_NameGroup1">
             <End Role="NameGroup" EntitySet="NameGroup" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
@@ -487,7 +471,7 @@
             <End Role="YearAdd" EntitySet="YearAdd" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
           <Property Type="Binary" Name="definition" Nullable="true" />
@@ -552,7 +536,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Journal" Relationship="AppAcademyWSRModel.FK_Journal_NameGroup" FromRole="NameGroup" ToRole="Journal" />
-          <NavigationProperty Name="Student" Relationship="AppAcademyWSRModel.FK_Student_NameGroup" FromRole="NameGroup" ToRole="Student" />
+          <NavigationProperty Name="Student" Relationship="AppAcademyWSRModel.FK_Student_NameGroup1" FromRole="NameGroup" ToRole="Student" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -592,7 +576,7 @@
           <NavigationProperty Name="History" Relationship="AppAcademyWSRModel.FK_History_Student" FromRole="Student" ToRole="History" />
           <NavigationProperty Name="Journal" Relationship="AppAcademyWSRModel.FK_Journal_Student" FromRole="Student" ToRole="Journal" />
           <NavigationProperty Name="Journal1" Relationship="AppAcademyWSRModel.FK_Journal_Student1" FromRole="Student" ToRole="Journal" />
-          <NavigationProperty Name="NameGroup" Relationship="AppAcademyWSRModel.FK_Student_NameGroup" FromRole="Student" ToRole="NameGroup" />
+          <NavigationProperty Name="NameGroup" Relationship="AppAcademyWSRModel.FK_Student_NameGroup1" FromRole="Student" ToRole="NameGroup" />
           <NavigationProperty Name="Special" Relationship="AppAcademyWSRModel.FK_Student_Special" FromRole="Student" ToRole="Special" />
           <NavigationProperty Name="YearAdd" Relationship="AppAcademyWSRModel.FK_Student_YearAdd" FromRole="Student" ToRole="YearAdd" />
         </EntityType>
@@ -755,7 +739,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Student_NameGroup">
+        <Association Name="FK_Student_NameGroup1">
           <End Type="AppAcademyWSRModel.NameGroup" Role="NameGroup" Multiplicity="1" />
           <End Type="AppAcademyWSRModel.Student" Role="Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -803,7 +787,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -954,7 +938,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

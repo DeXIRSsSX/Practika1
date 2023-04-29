@@ -24,14 +24,15 @@ namespace WpfApp3.xaml
         public PageAddEvaluation()
         {
             InitializeComponent();
-            CmbDiscipline.SelectedValuePath = "Id";
+            CmbDiscipline.SelectedValuePath = "id";
             CmbDiscipline.DisplayMemberPath = "Name";
             CmbDiscipline.ItemsSource = OdbConnectHelper.entObj.Discipline.ToList();
 
-            CmbNameStudent.SelectedValuePath = "Id";
+            CmbNameStudent.SelectedValuePath = "id";
             CmbNameStudent.DisplayMemberPath = "Name";
+          //  CmbNameStudent.ItemsSource = OdbConnectHelper.entObj.Student.ToList();
 
-            CmbGroup.SelectedValuePath = "Id";  
+            CmbGroup.SelectedValuePath = "id";  
             CmbGroup.DisplayMemberPath= "Name"; 
             CmbGroup.ItemsSource = OdbConnectHelper.entObj.NameGroup.ToList();
         }
@@ -45,7 +46,7 @@ namespace WpfApp3.xaml
                     Student = CmbNameStudent.SelectedItem as Student,
                     Evaluation = Convert.ToInt32(TxbEvaluation.Text).ToString(),
                     Discipline = CmbDiscipline.SelectedItem as Discipline,
-                    NameGroup = CmbGroup.SelectedItem as NameGroup,
+                    NameGroup = CmbGroup.SelectedItem as NameGroup
                 };
                 OdbConnectHelper.entObj.Journal.Add(jourObj);
                 OdbConnectHelper.entObj.SaveChanges();
@@ -58,12 +59,6 @@ namespace WpfApp3.xaml
             }
         }
 
-        private void CmbGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            int SelecteGroup = Convert.ToInt32(CmbGroup.SelectedValue);
-            CmbNameStudent.ItemsSource = OdbConnectHelper.entObj.Student.Where (x => x.IdNameGroup == SelecteGroup).ToList();
-        }
-
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
             FrameApp.frnObj.GoBack();   
@@ -72,6 +67,12 @@ namespace WpfApp3.xaml
         private void TxbEvaluation_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = "2345".IndexOf(e.Text) < 0;
+        }
+
+        private void CmbGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int SelectedGroup = Convert.ToInt32(CmbGroup.SelectedValue);
+            CmbNameStudent.ItemsSource = OdbConnectHelper.entObj.Student.Where(x => x.IdNameGroup == SelectedGroup).ToList();
         }
     }
 }

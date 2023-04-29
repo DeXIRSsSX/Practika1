@@ -6,12 +6,12 @@
     <edmx:Diagrams>
       <Diagram DiagramId="7227f34157f141ee880d53ad80413d58" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="AppAcademyWSRModel.Discipline" Width="1.5" PointX="0.75" PointY="9.625" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.FormTime" Width="1.5" PointX="3.75" PointY="9.875" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.FormTime" Width="1.5" PointX="3.75" PointY="7.625" />
         <EntityTypeShape EntityType="AppAcademyWSRModel.History" Width="1.5" PointX="8.25" PointY="3.875" />
         <EntityTypeShape EntityType="AppAcademyWSRModel.Journal" Width="1.5" PointX="3" PointY="4" />
         <EntityTypeShape EntityType="AppAcademyWSRModel.NameGroup" Width="1.5" PointX="0.75" PointY="4.5" />
         <EntityTypeShape EntityType="AppAcademyWSRModel.Role" Width="1.5" PointX="3.75" PointY="13.125" />
-        <EntityTypeShape EntityType="AppAcademyWSRModel.Special" Width="1.5" PointX="3.75" PointY="7.625" />
+        <EntityTypeShape EntityType="AppAcademyWSRModel.Special" Width="1.5" PointX="3.75" PointY="9.875" />
         <EntityTypeShape EntityType="AppAcademyWSRModel.Status" Width="1.5" PointX="6" PointY="0.75" />
         <EntityTypeShape EntityType="AppAcademyWSRModel.Student" Width="1.5" PointX="6" PointY="3.625" />
         <EntityTypeShape EntityType="AppAcademyWSRModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="8.5" />
@@ -28,7 +28,7 @@
         <AssociationConnector Association="AppAcademyWSRModel.FK_Journal_NameGroup" />
         <AssociationConnector Association="AppAcademyWSRModel.FK_Journal_Student" />
         <AssociationConnector Association="AppAcademyWSRModel.FK_Journal_Student1" />
-        <AssociationConnector Association="AppAcademyWSRModel.FK_Student_NameGroup" />
+        <AssociationConnector Association="AppAcademyWSRModel.FK_Student_NameGroup1" />
         <AssociationConnector Association="AppAcademyWSRModel.FK_User_Role" />
         <AssociationConnector Association="AppAcademyWSRModel.FK_Student_Special" />
         <AssociationConnector Association="AppAcademyWSRModel.FK_Student_YearAdd" />

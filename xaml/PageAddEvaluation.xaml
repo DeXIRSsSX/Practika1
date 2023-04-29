@@ -25,14 +25,14 @@
                 <TextBlock
                     Width="150"
                     Text="Выберите группу:"/>
-                <ComboBox
-                    Name="CmbGroup" SelectionChanged="CmbGroup_SelectionChanged"/>
+                <ComboBox SelectionChanged="CmbGroup_SelectionChanged"
+                    Name="CmbGroup"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock
                     Width="150"
                     Text="Выберите cтудента: "/>
-                <ComboBox Name="CmbNameStudent"/>
+                <ComboBox  Name="CmbNameStudent"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock
