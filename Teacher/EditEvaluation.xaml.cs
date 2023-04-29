@@ -42,7 +42,7 @@ namespace WpfApp3.Teacher
         {
             int SelectGroup = Convert.ToInt32(CmbSelectGroup.SelectedValue);
             ListStudent.ItemsSource = OdbConnectHelper.entObj.Student.Where(x => x.IdNameGroup == SelectGroup).ToList();
-            ListStudent.SelectedIndex = 0;
+           CmbSelectGroup.SelectedIndex = 0;
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

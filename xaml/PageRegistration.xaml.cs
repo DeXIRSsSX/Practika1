@@ -35,7 +35,7 @@ namespace WpfApp3.xaml
         {
             if (OdbConnectHelper.entObj.User.Count(x => x.Login == Txblogin.Text) > 0)
             {
-                MessageBox.Show("опять ввел того же дурачка", "Весточка", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Такой пользователь уже есть", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
             else
@@ -52,11 +52,11 @@ namespace WpfApp3.xaml
 
                     OdbConnectHelper.entObj.User.Add(UserObj);
                     OdbConnectHelper.entObj.SaveChanges();
-                    MessageBox.Show("Парнишка теперь при делах", "Весточка", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Студент добавлен", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ошибочка:" + ex.Message.ToString(), "Крит урон по работе", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Ошибка:" + ex.Message.ToString(), "Крит урон по работе", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
 
 

@@ -56,7 +56,7 @@ namespace WpfApp3.xaml
             try
             {
                 var userObj = OdbConnectHelper.entObj.User.FirstOrDefault(
-                    X => X.Login == TxbLogin.Text && X.Password == PsbPassword.Password);
+                    x => x.Login == TxbLogin.Text && x.Password == PsbPassword.Password);
                 if (userObj == null)
                 {
                     MessageBox.Show("Такого пользователя нету!","Уведомление",
@@ -73,7 +73,7 @@ namespace WpfApp3.xaml
                             //MessageBox.Show("Салам попалам Student", "Весточка" ,
                             // MessageBoxButton.OK,
                             // MessageBoxImage.Warning);
-                            RememberMe();
+                           /* RememberMe();*/
                             UserControlHelp.LoginUser = TxbLogin.Text;
                             FrameApp.frnObj.Navigate(new PageStudent());
                             break;
@@ -81,7 +81,7 @@ namespace WpfApp3.xaml
                             // MessageBox.Show("Салам сенсей", "Весточка" ,
                             //MessageBoxButton.OK,
                             // MessageBoxImage.Warning);
-                            RememberMe();
+                            /*RememberMe();*/
                             FrameApp.frnObj.Navigate(new PageTeacher());
                             break;
                     }
@@ -89,7 +89,7 @@ namespace WpfApp3.xaml
             }
             catch (Exception ex)
             {
-                MessageBox.Show("а","Ананас" + ex.Message.ToString(),
+                MessageBox.Show("Ошибка","Уведомление" + ex.Message.ToString(),
                     MessageBoxButton.OK,
                     MessageBoxImage.Warning);
                                    
