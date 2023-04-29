@@ -66,6 +66,7 @@ namespace WpfApp3.xaml
                 }
                 else
                 {
+                    UserControlHelp.IdUser = userObj.id;
                     switch (userObj.IdRole)
                     {
                         case 1:
