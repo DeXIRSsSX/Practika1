@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <StackPanel Background="#FFB832" />
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Image Source="Resources/pngwing.com (7).png">
+            <Image Source="/Resources/247308745d77763b855b9d6d5e476c75.png">
             </Image>
             <TextBlock
                 FontSize="14pt"

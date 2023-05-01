@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp3.DB;
+using WpfApp3.MVC;
 using WpfApp3.Teacher;
 
 namespace WpfApp3.xaml
@@ -37,11 +38,6 @@ namespace WpfApp3.xaml
             FrameApp.frnObj.Navigate(new PageAddStudent());
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void BtnAddEvaluation_Click(object sender, RoutedEventArgs e)
         {
             FrameApp.frnObj.Navigate(new PageAddEvaluation());
@@ -59,7 +55,14 @@ namespace WpfApp3.xaml
 
         private void DeleteStudent_Click(object sender, RoutedEventArgs e)
         {
+            FrameApp.frnObj.Navigate(new DeleteStudent());   
+        }
 
+      
+
+        private void BtnMVC_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frnObj.Navigate(new PageMVC());
         }
     }
 }

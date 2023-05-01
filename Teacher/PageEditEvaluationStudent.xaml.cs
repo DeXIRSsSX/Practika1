@@ -37,7 +37,14 @@ namespace WpfApp3.Teacher
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            
+          /*  History histroryObj = new History()
+            {
+                IdTeacher = UserControlHelp.IdUser,
+                IdStudent = StudentId,
+                IdStatus = 2,
+                DateEvent = DateTime.Now
+            };
+            OdbConnectHelper.entObj.History.Add(histroryObj);     */     
             OdbConnectHelper.entObj.SaveChanges();
             MessageBox.Show("Данные успешно изменены у студента -" + NameStudent + "!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
         }

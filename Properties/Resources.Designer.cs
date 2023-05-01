@@ -63,9 +63,9 @@ namespace WpfApp3.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Bitmap _32q {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                object obj = ResourceManager.GetObject("32q", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

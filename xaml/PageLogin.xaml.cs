@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp3.ClassHelper;
 using WpfApp3.DB;
-
+using WpfApp3.Director;
 
 namespace WpfApp3.xaml
 {
@@ -67,16 +67,21 @@ namespace WpfApp3.xaml
                 else
                 {
                     UserControlHelp.IdUser = userObj.id;
+                    UserControlHelp.NameUser = userObj.Name;
                     switch (userObj.IdRole)
                     {
                         case 1:
-                           /* RememberMe();*/
-                            /*UserControlHelp.LoginUser = TxbLogin.Text;*/
+                            RememberMe();
+                            UserControlHelp.LoginUser = TxbLogin.Text;
                             FrameApp.frnObj.Navigate(new PageStudent());
                             break;
                         case 2:
-                            /*RememberMe();*/
+                            RememberMe();
                             FrameApp.frnObj.Navigate(new PageTeacher());
+                            break;
+                        case 3:
+                            WindowDirector windowsDirector = new WindowDirector();
+                            windowsDirector.Show();
                             break;
                     }
                 }
@@ -85,12 +90,8 @@ namespace WpfApp3.xaml
             {
                 MessageBox.Show("Ошибка","Уведомление" + ex.Message.ToString(),
                     MessageBoxButton.OK,
-                    MessageBoxImage.Warning);
-                                   
+                    MessageBoxImage.Warning);                                 
             }
-
-                
-
         }
     }
 }

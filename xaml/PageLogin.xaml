@@ -40,7 +40,7 @@
                     Content="Регистрация"/>
                 
             </StackPanel>
-            <CheckBox Name="ChkSaveLogin" HorizontalAlignment="Left" IsChecked="True" Content="Сохранить логин"/>
+            <CheckBox Name="ChkSaveLogin" HorizontalAlignment="Left" Content="Сохранить логин"/>
         </StackPanel>
     </Grid>
 </Page>

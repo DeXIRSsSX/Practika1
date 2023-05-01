@@ -14,5 +14,7 @@ namespace WpfApp3.ClassHelper
         public static int IdUser { get; set; }
         public static string Password { get; set; }
         public static string LoginUser { get; set; } = "Нет логина";
+
+        public static string NameUser { get; set;}
     }
 }

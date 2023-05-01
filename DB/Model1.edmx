@@ -105,6 +105,7 @@
           <Property Name="Login" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="IdRole" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="YearAdd">
           <Key>
@@ -126,7 +127,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_History_Student">
-          <End Role="Student" Type="Self.Student" Multiplicity="1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="History" Type="Self.History" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Student">
@@ -186,7 +189,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Journal_Student2">
-          <End Role="Student" Type="Self.Student" Multiplicity="1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Journal" Type="Self.Journal" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Student">
@@ -610,6 +615,7 @@
           <Property Name="IdRole" Type="Int32" Nullable="false" />
           <NavigationProperty Name="History" Relationship="AppAcademyWSRModel.FK_History_User" FromRole="User" ToRole="History" />
           <NavigationProperty Name="Role" Relationship="AppAcademyWSRModel.FK_User_Role" FromRole="User" ToRole="Role" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="YearAdd">
           <Key>
@@ -923,6 +929,7 @@
           <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="AppAcademyWSRModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="IdRole" ColumnName="IdRole" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
