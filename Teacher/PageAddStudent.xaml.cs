@@ -59,7 +59,7 @@ namespace WpfApp3.Teacher
                 };
                 OdbConnectHelper.entObj.Student.Add(stdObj);
                 OdbConnectHelper.entObj.SaveChanges();
-                MessageBox.Show("Студент" + stdObj.Name + "успешно добавлен", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Студент " + stdObj.Name + " успешно добавлен", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {

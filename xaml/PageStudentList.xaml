@@ -20,17 +20,17 @@
                 <ComboBox Height="35" Name="CmbSlectGroup" SelectionChanged="CmbSlectGroup_SelectionChanged"/>
                 <Button Name="BtnSearch" Content="Ок" Click="BtnSearch_Click"/>
             </StackPanel>
-            <DataGrid Name="GridList" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto">
+            <DataGrid IsReadOnly="True" Name="GridList" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Name}" Header="ФИО" Width="*"/>
                     <DataGridTextColumn Binding="{Binding NameGroup.Name}" Header="Группа" Width="100"/>
                     <DataGridTextColumn Binding="{Binding Special.Name}" Header="Специальность" Width="100"/>
                     <DataGridTextColumn Binding="{Binding FormTime.Name}" Header="Форма обучения" Width="130"/>
                     <DataGridTextColumn Binding="{Binding YearAdd.Year}" Header="Год поступления" Width="120"/>
-                    <DataGridTemplateColumn Width="*">
+                    <DataGridTemplateColumn Width="150">
                         <DataGridTemplateColumn.CellEditingTemplate>
                             <DataTemplate>
-                                <Button Name="BtnProfile" Content="" Click="BtnProfile_Click"/>
+                                <Button Name="BtnProfile" Content="Профиль" Click="BtnProfile_Click"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
                     </DataGridTemplateColumn>

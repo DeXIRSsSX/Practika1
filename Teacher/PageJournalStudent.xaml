@@ -16,7 +16,7 @@
             </StackPanel>
             <StackPanel Name="DataPrint">
             <TextBlock Text="Имя" Name="TxtName" Margin="5" HorizontalAlignment="Left" FontSize="15pt" FontWeight="DemiBold" VerticalAlignment="Top"/>
-            <DataGrid AutoGenerateColumns="False" Name="ListJoutnal" Height="220">
+                <DataGrid IsReadOnly="True" AutoGenerateColumns="False" Name="ListJoutnal" Height="220">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Предмет" Binding="{Binding Discipline.Name}" Width="*"/>
                     <DataGridTextColumn Header="Оценка" Binding="{Binding Evaluation}" Width="*"/>

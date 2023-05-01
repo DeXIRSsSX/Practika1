@@ -21,7 +21,7 @@
                 <TextBlock VerticalAlignment="Center" Text="Выберите группу: "/>
                 <ComboBox Name="CmbSelectGroup" SelectionChanged="CmbSelectGroup_SelectionChanged"/>
             </StackPanel>
-            <DataGrid AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto" Height="220" Name="ListStudent">
+            <DataGrid IsReadOnly="True" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto" Height="220" Name="ListStudent">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Name}" Width="*" Header="ФИО Студентов"/>
                     <DataGridTemplateColumn Width="*">

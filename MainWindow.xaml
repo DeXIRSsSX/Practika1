@@ -11,12 +11,8 @@
             <RowDefinition Height="105"/>
             <RowDefinition Height="314"/>
         </Grid.RowDefinitions>
-
-
         <StackPanel Background="#FFB832" />
-        <StackPanel
-            Orientation="Horizontal"
-            HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Image Source="Resources/pngwing.com (7).png">
             </Image>
             <TextBlock
@@ -24,13 +20,9 @@
                 FontWeight="Bold"
                 Margin="10,35"
                 VerticalAlignment="Center"
-            Text="{Binding ElementName=FrmMain,
-                Path=Content.Title}" Width="187"/>
-
+            Text="{Binding ElementName=FrmMain, Path=Content.Title}" Width="auto"/>
         </StackPanel>
-
-
-       <Frame
+        <Frame
            NavigationUIVisibility="Hidden"
            x:Name="FrmMain"
            Grid.Row="1"

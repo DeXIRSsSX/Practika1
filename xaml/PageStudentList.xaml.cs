@@ -52,9 +52,9 @@ namespace WpfApp3.xaml
 
         private void CmbSlectGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            /*int SelectGroup = Convert.ToInt32(CmbSlectGroup.SelectedValue);
+            int SelectGroup = Convert.ToInt32(CmbSlectGroup.SelectedValue);
             GridList.ItemsSource = OdbConnectHelper.entObj.Student.Where(x => x.IdNameGroup == SelectGroup).ToList();
-            GridList.SelectedIndex = 0;*/
+            GridList.SelectedIndex = 0;
         }
     }
 }
